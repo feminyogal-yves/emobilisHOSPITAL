@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %}Patient Details{% endblock %}
+
+{% block content %}
+    <h2>Patient Details</h2>
+    <dl>
+        <dt>Patient ID</dt>
+        <dd>{{ patient.patient_id }}</dd>
+        <dt>Name</dt>
+        <dd>{{ patient.name }}</dd>
+        <dt>Age</dt>
+        <dd>{{ patient.age }}</dd>
+        <dt>Gender</dt>
+        <dd>{{ patient.gender }}</dd>
+        <dt>Address</dt>
+        <dd>{{ patient.address }}</dd>
+        <dt>Phone</dt>
+        <dd>{{ patient.phone_number }}</dd>
+        <dt>Email</dt>
+        <dd>{{ patient.email }}</dd>
+    </dl>
+{% endblock %}

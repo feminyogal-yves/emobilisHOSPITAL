@@ -1,0 +1,190 @@
+/* Signup Page */
+
+.signup-page {
+    min-height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    background: #f5f7fa;
+}
+
+.signup-card {
+    width: 100%;
+    max-width: 460px;
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+
+/* Header */
+
+.signup-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.signup-header h1 {
+    margin: 0 0 10px;
+    color: #1f2937;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.signup-header p {
+    margin: 0;
+    color: #6b7280;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+
+/* Form */
+
+.signup-form {
+    width: 100%;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #374151;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+
+/* Django input fields */
+
+.form-group input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px 14px;
+    border: 1px solid #d1d5db;
+    border-radius: 7px;
+    background: #ffffff;
+    color: #1f2937;
+    font-size: 15px;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-group input:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+
+/* Help text from Django */
+
+.form-group .helptext {
+    display: block;
+    margin-top: 6px;
+    color: #6b7280;
+    font-size: 12px;
+    line-height: 1.4;
+}
+
+
+/* Remove Django's default bullet styling */
+
+.form-group ul {
+    margin: 6px 0 0;
+    padding-left: 18px;
+    color: #6b7280;
+    font-size: 12px;
+}
+
+
+/* Signup button */
+
+.signup-button {
+    width: 100%;
+    padding: 13px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 7px;
+    background: #2563eb;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+}
+
+.signup-button:hover {
+    background: #1d4ed8;
+}
+
+.signup-button:active {
+    transform: scale(0.99);
+}
+
+
+/* Error messages */
+
+.error-message {
+    margin-bottom: 20px;
+    padding: 12px;
+    border-radius: 6px;
+    background: #fee2e2;
+    color: #b91c1c;
+    font-size: 14px;
+}
+
+.field-error {
+    margin-top: 6px;
+    color: #dc2626;
+    font-size: 13px;
+}
+
+
+/* Login link */
+
+.login-link {
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 1px solid #e5e7eb;
+    text-align: center;
+}
+
+.login-link span {
+    color: #6b7280;
+    font-size: 14px;
+}
+
+.login-link a {
+    margin-left: 5px;
+    color: #2563eb;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+}
+
+
+/* Mobile */
+
+@media (max-width: 500px) {
+
+    .signup-page {
+        padding: 25px 15px;
+    }
+
+    .signup-card {
+        padding: 30px 25px;
+    }
+
+    .signup-header h1 {
+        font-size: 26px;
+    }
+}
