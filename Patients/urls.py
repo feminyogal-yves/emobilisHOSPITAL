@@ -18,6 +18,9 @@ from django.contrib import admin
 from django.urls import path
 from Patients import views
 
+router = routers.DefaultRouter()
+router.register(r'patients', views.PatientViewSet, basename='patient')
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('index/',views.index,name='index'),
@@ -30,4 +33,5 @@ urlpatterns = [
     path('patient/<int:pk>/', views.patient_detail, name='patient_detail'),
     path('patient/<int:pk>/edit/', views.edit_patient, name='edit_patient'),
     path('patient/<int:pk>/delete/', views.delete_patient, name='delete_patient'),
+    path('api/', include(router.urls)),  # Include the router URLs for the API
 ]

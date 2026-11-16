@@ -4,6 +4,8 @@ from django.contrib.auth import login, authenticate, logout
 from django.contrib.auth.decorators import login_required
 from Patients.forms import PatientForm
 from Patients.models import Patient
+from rest_framework import viewsets
+from rest_framework.permissions import AllowAny
 
 # SIGN UP / REGISTRATION
 
@@ -163,3 +165,8 @@ def delete_patient(request, pk):
     return render(request, 'patient_confirm_delete.html', {
         'patient': patient
     })
+
+class PatientViewSet(viewsets.ModelViewSet):
+    queryset = Patient.objects.all()
+    serializer_class = PatientSerializer
+    permission_classes = [AllowAny]  # Adjust permissions as needed
